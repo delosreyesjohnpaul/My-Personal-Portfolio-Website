@@ -4,32 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website</title>
+    <title>Delos Reyes John Paul Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <script src="https://kit.fontawesome.com/d806fb8984.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div id="header">
-    <div class="container">
-        <nav>
+    <header>
+        <div class="nav-bar">
             <img src="images/logo.png" class="logo">
-            <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#my_team">My Team</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-            </ul>
-            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-        </nav>
-        <div class="header-text">
-            <p>Aspiring Machine Learning Engineer</p>
-            <h1><span class="auto-type"></span></h1>
+          <div class="navigation">
+            <div class="nav-items">
+              <i class="uil uil-times nav-close-btn"></i>
+              <a href="#"><i class="uil uil-home"></i> Home</a>
+              <a href="#about"><i class="uil uil-info-circle"></i> About</a>
+              <a href="#services"><i class="uil uil-folder-network"></i> Services</a>
+              <a href="#portfolio"><i class="uil uil-layer-group"></i></i> Portfolio</a>
+              <a href="#my_team"><i class="uil uil-users-alt"></i></i> My Team</a>
+              <a href="#contact"><i class="uil uil-envelope"></i> Contact</a>
+            </div>
+          </div>
+          <i class="uil uil-apps nav-menu-btn"></i>
         </div>
-    </div>
-</div>
+        <div class="scroll-indicator-container">
+          <div class="scroll-indicator-bar"></div>
+        </div>
+      </header>
+    
+  <section class="home">
+    <div class="home2">
+        <p>Aspiring Machine Learning Engineer</p>
+        <h2><span class="auto-type"></span></h2>
+      </div>
+  </section>
+
+
+
 <!-- -------about------- -->
 <div id="about">
     <div class="container">
@@ -210,13 +220,38 @@
     </div>
 </div>
 
+<script>
+    //Javacript for the scroll indicator bar
+    window.addEventListener("scroll", () => {
+      const indicatorBar = document.querySelector(".scroll-indicator-bar");
+
+      const pageScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollValue = (pageScroll / height) * 100;
+
+      indicatorBar.style.width = scrollValue + "%";
+    });
+
+    //Responsive navigation menu toggle
+    const menuBtn = document.querySelector(".nav-menu-btn");
+    const closeBtn = document.querySelector(".nav-close-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      navigation.classList.add("active");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      navigation.classList.remove("active");
+    });
+  </script>
 
 
 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>   
 
 <script>
     var typed = new Typed(".auto-type", {
-        strings: ["Hi, I'm John Paul", "I'm from the Philippines", "I'm 2nd Year College Student","Studying at ISU Cauayan Campus",  "I love Coding", "I love Making Projects", "And  Future Machine Lerarnig Engineer", ],
+        strings: ["Hi, I'm John Paul", "I'm from the Philippines", "I'm 2nd Year College Student","Studying at ISU Cauayan Campus",  "I love Coding", "I love Making Projects", "And  Future Machine Learnig Engineer", ],
         typeSpeed: 110,
         backSpeed: 110,
         loop: true
@@ -241,18 +276,6 @@
 
 </script>
 
-<script>
-
-    var sidemenu = document.getElementById("sidemenu");
-
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-    }
-
-</script>
 
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzMdtx1DdKJs13rWEKAB-BHNtmMr_yiMQieCUEjnNEPvYdTPflvVej9JLhz50ZYnqk-/exec'

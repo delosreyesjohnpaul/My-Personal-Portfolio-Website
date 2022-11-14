@@ -14,44 +14,44 @@ body{
     background: #080808;
     color: #fff;
 }
-#header{
-    width: 100%;
-    height: 100vh;
-    background-image: url(images/background.png);
-    background-size: cover;
-    background-position: center;
-}
 .container{
     padding: 10px 10%;
 }
 
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+header{
+    z-index: 999;
+    position: fixed;
+    width: 100%;
 }
 
-.logo{
-    width: 140px;
+header .nav-bar{
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    height: 4em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 150px;
+    transition: 0.5s ease;
+}
+
+.nav-bar .logo{
+    width: 190px;
     cursor: pointer;
 }
 
-nav ul li{
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px ;
-}
-
-nav ul li a{
+.navigation .nav-items a{
     color: #fff;
+    font-size: 1em;
     text-decoration: none;
-    font-size: 18px;
     position: relative;
-    font-weight: 600;
+    font-weight: 500;
 }
-
-nav ul li a::after{
+.navigation .nav-items a::after{
     content: '';
     width: 0%;
     height: 3px;
@@ -62,23 +62,103 @@ nav ul li a::after{
     transition: 0.4s;
 }
 
-nav ul li a:hover::after{
+.navigation .nav-items a:hover::after{
     width: 100%;
 }
 
-.header-text{
-    margin-top: 20%;
-    font-size: 30px;
+.navigation .nav-items a:not(:last-child){
+    margin-right: 40px;
+}
+.navigation .nav-items a i{
+    display: none;
+}
+.home{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background: url(images/background.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
 }
 
-.header-text h1{
-    font-size: 60px;
+.home .home2{
+    margin-top: 0;
+    font-size: 27px;
+    margin-left: 80px;
+    font-weight: 490;
+}
+
+.home .home2 h2{
+    font-size: 55px;
     margin-top: 20px;
+    font-weight: 400;
 }
 
-.header-text h1 span{
+.home .home2 h2{
     color: #ff004f;
 }
+
+
+.home:before{
+    z-index: 888;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(transparent, #000116);
+    bottom: 0;
+    left: 0;
+}
+
+/*======= Scroll bar =======*/
+::-webkit-scrollbar{
+    background: #fff;
+    width: 11px;
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #282f4e;
+    width: 100%;
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: #454f6d;
+}
+
+/*======= Scroll indicator bar =======*/
+.scroll-indicator-container{
+    width: 100%;
+    height: 5px;
+}
+
+.scroll-indicator-bar{
+    background: #ff004f;
+    width: 0%;
+    height: 100%;
+    box-shadow: 0 5px 25px #ff004f,
+                0 5px 50px #ff004f;
+}
+
+.nav-close-btn, .nav-menu-btn{
+    display: none;
+}
+
+/*======= Media queries (max-width: 1100px) =======*/
+@media screen and (max-width: 1100px){
+    header .nav-bar{
+        padding: 0 50px;
+    }
+
+    section{
+        padding: 30px 50px;
+        font-size: 0.9em;
+    }
+}
+
 
 /*-----------about-----------*/
 
@@ -372,45 +452,37 @@ form .btn2{
 }
 
 /*-----------css for small screens----------*/
-nav .fa-solid{
-    display: none;
+
+/*======= Media queries (max-width: 1100px) =======*/
+@media screen and (max-width: 1100px){
+    header .nav-bar{
+        padding: 0 50px;
+    }
 }
 
 @media only screen and (max-width: 600px){
-    #header{
+    header{
         background-image: url(images/phone-background.png);
     }
-    .header-text{
+
+    .home{
+        position: relative;
+        min-height: 100vh;
+        background: url(images/phone-background.png) no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .home .home2{
         margin-top: 100%;
         font-size: 16px;
+        margin-left: 6px;
     }
-    .header-text h1{
+    .home .home2 h2{
         font-size: 30px;
-    }
-    nav .fa-solid{
-        display: block;
-        font-size: 25px;
-    }
-    nav ul{
-        background: #ff004f;
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
-        z-index: 2;
-        transition: right 0.5s;
-    }
-    nav ul li{
-        display: block;
-        margin: 25px;
-    }
-    nav ul .fa-solid{
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: pointer;
     }
     .sub-title{
         font-size: 40px;
@@ -430,6 +502,76 @@ nav .fa-solid{
     }
     .contact-left, .contact-right{
         flex-basis: 100%;
+    }
+
+    .nav-menu-btn{
+        display: block;
+        color: #fff;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
+    .navigation{
+        z-index: 99999;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s ease;
+    }
+
+    .navigation.active{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .navigation .nav-items{
+        position: relative;
+        background: #fff;
+        width: 400px;
+        max-width: 400px;
+        display: grid;
+        place-content: center;
+        margin: 20px;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.8);
+        transform: translateY(-200px);
+        transition: 0.3s ease;
+    }
+
+    .navigation.active .nav-items{
+        transform: translateY(0);
+    }
+
+    .navigation .nav-items a{
+        color: #222;
+        font-size: 1em;
+        margin: 15px 50px;
+    }
+
+    .navigation .nav-items a i{
+        display: inline-block;
+        font-size: 1.2em;
+        margin-right: 5px;
+    }
+
+    .nav-close-btn{
+        display: block;
+        color: #222;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 1.3em;
+        margin: 10px;
+        cursor: pointer;
     }
 }
 
