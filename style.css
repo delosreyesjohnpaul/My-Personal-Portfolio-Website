@@ -58,7 +58,7 @@ header .nav-bar{
     font-size: 1em;
     text-decoration: none;
     position: relative;
-    font-weight: 500;
+    font-weight: 600;
 }
 .navigation .nav-items a::after{
     content: '';
@@ -102,7 +102,10 @@ header .nav-bar{
 .home .home2 h2{
     font-size: 55px;
     margin-top: 20px;
-    font-weight: 400;
+    font-weight: 500;
+}
+.home .home2 h2 span{
+    font-weight: 700;
 }
 
 .home .home2 h2{
