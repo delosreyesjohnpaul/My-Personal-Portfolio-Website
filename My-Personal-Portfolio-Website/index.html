@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delos Reyes John Paul Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <script src="https://kit.fontawesome.com/d806fb8984.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+
+<!--preloader Markup-->
+
+<div id="preloader"> </div>
+
+
+    <header>
+        <div class="nav-bar">
+            <img src="images/logo.png" class="logo">
+          <div class="navigation">
+            <div class="nav-items">
+              <i class="uil uil-times nav-close-btn"></i>
+              <a href="#"><i class="uil uil-home"></i> Home</a>
+              <a href="#about"><i class="uil uil-info-circle"></i> About</a>
+              <a href="#services"><i class="uil uil-folder-network"></i> Services</a>
+              <a href="#portfolio"><i class="uil uil-layer-group"></i></i> Portfolio</a>
+              <a href="#my_team"><i class="uil uil-users-alt"></i></i> My Team</a>
+              <a href="#contact"><i class="uil uil-envelope"></i> Contact</a>
+            </div>
+          </div>
+          <i class="uil uil-apps nav-menu-btn"></i>
+        </div>
+        <div class="scroll-indicator-container">
+          <div class="scroll-indicator-bar"></div>
+        </div>
+      </header>
+    
+  <section class="home">
+    <div class="home2">
+        <p>Aspiring Machine Learning Engineer</p>
+        <h2><span class="auto-type"></span></h2>
+      </div>
+  </section>
+
+
+
+<!-- -------about------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p align="justify">"Computer Science is a science of abstraction -creating the right model for a problem and devising the appropriate mechanizable techniques to solve it."- Alfred Aho <br>
+                    <br>Hi! my name is John Paul Delos Reyes this is my second year at Isabela State University Cauayan Campus. 
+                    I chose to study computer science because I find the operation of computers fascinating. 
+                    I also spend the majority of my free time creating programs that are both useful and enjoyable to use. In order to maximize my potential and expand my knowledge, 
+                    I want to work in programming for a large corporation, work in a team, and travel around the world. <br><br> I often think that computer science will give me the chance to reach higher peaks,
+                    and I really consider that it has already helped me see life in a different way. Programming gave me the chance to meet interesting people and discover a new world. 
+                    That is exactly why I would like to study and pursue a career in this field.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI?UX</span><br>Designing Web/App Interfaces</li>
+                            <li><span>Database</span><br>Designing Database Management System</li>
+                            <li><span>Programing Language Skills</span><br>C++ 90%, Phython 60% and Java 50%</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022-Current</span><br>Self-taught Database Designer<br>Building Simple Database Management System</li>
+                            <li><span>2021-2022</span><br> Making Simple C++ Programs and Systems</li>
+                            <li><span>2020-2021</span><br>Improving my Programming Skills <br>Improving my knowledge about C++ and Python</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020-Current</span><br>2nd Year College at <br>Isabela State University Cauayan Campus</li>
+                            <li><span>2018-2020</span><br>Senior High at Villa Cacho Integrated School</li>
+                            <li><span>2014-2018</span><br>Junior High at Villa Cacho Integrated School</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- -------Services------- -->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-sharp fa-solid fa-database"></i>
+                <h2>Database Design</h2>
+                <p align="justify">Design, test and implement databases applaying knowledge of database management systems,
+                guarding the protection and security of the database. </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-sharp fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p align="justify">Plan, create and code internet sites and web pages, many of which combine text
+                with sounds, pictures, graphics and video clips. </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h2>Tutoring Students</h2>
+                <p align="justify">Our duties are to assist students in the creation and development of software and help them 
+                learn how to maintain and fix code in various formats. </p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- -------Portfolio------- -->
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Database Designing</h3>
+                    <p>A properly design provides you with access to up-to-date, accurate information.</p>
+                    <a href="https://github.com/delosreyesjohnpaul/Simple-Database-Management-System"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>C++ Math Program</h3>
+                    <p>A C++ Program that solves problems like geometry, sequence and it has a Math Game</p>
+                    <a href="https://github.com/delosreyesjohnpaul/Cpp-Math-Program"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Team Project</h3>
+                    <p>A Team Project formed Comia Dhon Amado, Morete Christian Arthur, Ganiola Reymerson and me.
+                    A project about ISU-CCSICT Student Log-In.</p>
+                    <a href="https://github.com/donForProjects/Student-Login-System"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/delosreyesjohnpaul/My-Projects"class=btn>See more</a>
+    </div>
+</div>
+
+<!-- -------My Team------- -->
+
+<div id="my_team">
+    <div class="container">
+        <h1 class="sub-title">My Team</h1>
+        <div class="body">
+
+            <div class="containers">
+                <input type="radio" name="dot" id="one">
+                <input type="radio" name="dot" id="two">
+                <div class="main-card">
+                  <div class="cards">
+                    <div class="card">
+                     <div class="content">
+                       <div class="img">
+                        <img src="images/team.jpg" alt="">
+                       </div>
+                       <div class="details">
+                         <div class="name">The Error Makers</div>
+                         <div class="job">A Team we formed in order to broaden our knowledge, and  team build projects. </div>
+                       </div>
+                       <div class="media-icons">
+                        <a href="#"><i class="fa-solid fa-house-user"></i></a>
+                         <a href="#"><i class="fab fa-facebook-f"></i></a>
+                         <a href="#"><i class="fa-brands fa-github"></i></a>
+                         <a href="midnight.official30@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                       </div>
+                     </div>
+                    </div>
+                    <div class="card">
+                     <div class="content">
+                       <div class="img">
+                        <img src="images/dhon.jpg" alt="">
+                       </div>
+                       <div class="details">
+                         <div class="name">Dhon Amado Comia</div>
+                         <div class="job">2nd Year College Student <br> Studying at ISU Cauayan Campus</div>
+                       </div>
+                       <div class="media-icons">
+                        <a href="#"><i class="fa-solid fa-house-user"></i></a>
+                        <a href="https://www.facebook.com/Dubududdubu.tofutototofu"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://github.com/donForProjects"><i class="fa-brands fa-github"></i></a>
+                        <a href="mojakofan05@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                       </div>
+                     </div>
+                    </div>
+                    <div class="card">
+                     <div class="content">
+                       <div class="img">
+                        <img src="images/ian.jpg" alt="">
+                       </div>
+                       <div class="details">
+                         <div class="name">Christian Arthur Morete</div>
+                         <div class="job">2nd Year College Student <br> Studying at ISU Cauayan Campus</div>
+                       </div>
+                       <div class="media-icons">
+                        <a href="#"><i class="fa-solid fa-house-user"></i></a>
+                        <a href="https://www.facebook.com/nh.177013"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://github.com/ianProjects30"><i class="fa-brands fa-github"></i></a>
+                        <a href="christianmorete3@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                       </div>
+                     </div>
+                    </div>
+                  </div>
+                  <div class="cards">
+                    <div class="card">
+                     <div class="content">
+                       <div class="img">
+                        <img src="images/meyson.jpg" alt="">
+                       </div>
+                       <div class="details">
+                         <div class="name">Reymerson Ganiola</div>
+                         <div class="job">2nd Year College Student <br> Studying at ISU Cauayan Campus</div>
+                       </div>
+                       <div class="media-icons">
+                        <a href="#"><i class="fa-solid fa-house-user"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100063977749962"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://github.com/"><i class="fa-brands fa-github"></i></a>
+                        <a href="ganiola.meysonc@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                       </div>
+                     </div>
+                    </div>
+                    <div class="card">
+                     <div class="content">
+                       <div class="img">
+                        <img src="images/pan-pan.jpg" alt="">
+                       </div>
+                       <div class="details">
+                         <div class="name">Novie Grace Eder "Pan Pan"</div>
+                         <div class="job">2nd Year College Student <br> Studying at ISU Cauayan Campus</div>
+                       </div>
+                       <div class="media-icons">
+                        <a href="#"><i class="fa-solid fa-house-user"></i></a>
+                        <a href="https://web.facebook.com/noviegrace.eder"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://github.com"><i class="fa-brands fa-github"></i></a>
+                        <a href="edernoviegrace15@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                       </div>
+                     </div>
+                    </div>
+                    <div class="card">
+                     <div class="content">
+                       <div class="img">
+                        <img src="images/album.jpg" alt="">
+                       </div>
+                       <div class="details">
+                         <div class="name">Group Pictures <br></div>
+                         
+                         <div class="job">Follow us on this College Journey</div>
+                       </div>
+                       <div class="media-icons">
+                        <a href="#"><i class="fa-solid fa-house-user"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://github.com"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://drive.google.com/drive/u/0/folders/16uYamU9Lib83h4R719rX1jaJwRB1XJVl"><i class="fa-brands fa-google-drive"></i></a>
+                       </div>
+                     </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="button">
+                  <label for="one" class=" active one"></label>
+                  <label for="two" class="two"></label>
+                </div>
+              </div>
+        
+          </div>
+    </div>
+</div>
+<!-- -------Contact------- -->
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-sharp fa-solid fa-paper-plane"></i>delosreyesjohnpaul30@gmail.com</p>
+                <p><i class="fa-sharp fa-solid fa-square-phone"></i>+639567062447</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/delosreyesjohnpaul30"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/delosreyes0330"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/phdr.30/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/john-paul-delos-reyes-181838255/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/delosreyesjohnpaul"><i class="fa-brands fa-square-github"></i></a>
+                </div>
+                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var loader = document.getElementById("preloader");
+    window.addEventListener("load", function(){
+        loader.style.display = "none";
+    })  
+</script>
+
+<script>
+    //Javacript for the scroll indicator bar
+    window.addEventListener("scroll", () => {
+      const indicatorBar = document.querySelector(".scroll-indicator-bar");
+
+      const pageScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollValue = (pageScroll / height) * 100;
+
+      indicatorBar.style.width = scrollValue + "%";
+    });
+
+    //Responsive navigation menu toggle
+    const menuBtn = document.querySelector(".nav-menu-btn");
+    const closeBtn = document.querySelector(".nav-close-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      navigation.classList.add("active");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      navigation.classList.remove("active");
+    });
+  </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>   
+
+<script>
+    var typed = new Typed(".auto-type", {
+        strings: ["Hi, I'm John Paul", "I'm from the Philippines", "I'm 2nd Year College Student","Studying at ISU Cauayan Campus",  "I love Coding", "I love Making Projects", "And  Future Machine Learnig Engineer", ],
+        typeSpeed: 110,
+        backSpeed: 110,
+        loop: true
+    })
+</script>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzMdtx1DdKJs13rWEKAB-BHNtmMr_yiMQieCUEjnNEPvYdTPflvVej9JLhz50ZYnqk-/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message Sent Successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },1000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+
+</body>
+</html>
